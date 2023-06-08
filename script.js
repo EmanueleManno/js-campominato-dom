@@ -1,9 +1,6 @@
 //VEDIAMO SE FUNZIONA
 console.log('JS');
 
-//VEDO SE FUNZIONA:
-console.log('JS OK');
-
 //RECUPERIAMO GLI ELEMENTI DAL DOM:
 const container = document.querySelector('.container');
 console.log(container);
@@ -11,8 +8,6 @@ const grid = document.getElementById('grid');
 console.log(grid);
 const button = document.querySelector('button');
 console.log(button);
-const cell = document.getElementsByClassName('cell');
-console.log(cell);
 
 //PREPARO I MIEI DATI INIZIALI:
 const rows = 10;
@@ -26,10 +21,10 @@ const createCell = () => {
     return cell;
 }
 
-//RENDERIZZIAMO LE CELLE:
+//SCRIVO I NUMERI DENTRO ALLE CELLE:
 for (let i=0; i< cells; i++) {
     const cell = createCell();
-    cell.innerText = i +1;
+    cell.innerText = i + 1;
 
     //AL CLICK DELLA CELLA COLORALA DI AZZURRO:
     cell.addEventListener('click',() => {

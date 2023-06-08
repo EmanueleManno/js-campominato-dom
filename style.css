@@ -48,7 +48,7 @@ header img {
     width: calc(100% / 10);
     border: 1px solid black;
     cursor: pointer;
-    padding: 15px;
+    padding: 20px;
 }
 
 /*BOTTONE*/
@@ -74,9 +74,14 @@ h2 {
     display: none;
 }
 
-/*CLASSE BLOCK*/
+/*SFONDO CELLE BUONE*/
 .bg-lightblue {
     background-color: lightskyblue;
+}
+
+/*SFONDO CELLE BOMBE*/
+.bg-bomb {
+    background-color: red;
 }
 
 /*CLASSE FLEX*/
@@ -86,3 +91,35 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
+/*CLASSE SHAKE PER LE BOMBE*/
+.shake {
+    animation: shake 2s ease infinite;
+  }
+
+  @keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+/*CLASSE HI-THERE PER IL BOTTONE*/
+.hithere {
+        animation: hithere 1s ease infinite;
+}
+    @keyframes hithere {
+      30% { transform: scale(1.2); }
+      40%, 60% { transform: rotate(-20deg) scale(1.2); }
+      50% { transform: rotate(20deg) scale(1.2); }
+      70% { transform: rotate(0deg) scale(1.2); }
+      100% { transform: scale(1); }
+}
+
+/*CLASSE FADE-IN PER IL TITOLO*/
+.fadein {
+    animation: fade-in 2s linear infinite;
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
