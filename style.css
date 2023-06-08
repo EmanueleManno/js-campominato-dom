@@ -1,0 +1,88 @@
+/*CSS RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*GENERICS*/
+body {
+    font-family: sans-serif;
+    background-color: lightgoldenrodyellow;
+}
+
+/*UTILITIES*/
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+header {
+    height: 200px;
+    padding: 10px 30px;
+    line-height: 50px;
+    background-color: white;
+}
+
+/*IMMAGINE NELL'HEADER*/
+header img {
+    height: 150px;
+    width: 175px;
+}
+
+/*GRIGLIA*/
+#grid {
+    height: 600px;
+    width: 600px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed black;
+}
+
+/*CELLA*/
+.cell {
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 15px;
+}
+
+/*BOTTONE*/
+button {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: 75px;
+    background-color: lightcyan;
+}
+
+/*TITOLO DELL'HEADER*/
+h2 {
+    color: lightseagreen;
+    font-size: 50px;
+    padding: 10px 15px;
+}
+
+/*CLASSE NONE*/
+.none {
+    display: none;
+}
+
+/*CLASSE BLOCK*/
+.bg-lightblue {
+    background-color: lightskyblue;
+}
+
+/*CLASSE FLEX*/
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
