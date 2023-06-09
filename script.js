@@ -51,6 +51,32 @@ const startGame = () => {
     //PREPARO IL PUNTEGGIO:
     let score = 0;
 
+    //NUMERO DELLE BOMBE:
+    const totalBombs = 16;
+
+    //PUNTEGGIO MASSIMO:
+    const maxPoints = totalCells - totalBombs;
+
+    //CONTENITORE DELLE BOMBE:
+    const bombs = generateBombs(totalBombs, totalCells);
+    console.log(bombs);
+
+    //FUNZIONE GENERA BOMBE:
+    function generateBombs(numberOfBombs, maxNumber) {
+        let bombs = [];
+
+        while(bombs.length < numberOfBombs) {
+            let randomNumber;
+            do {
+            randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+        }
+            while(bombs.includes(randomNumber));
+            bombs.push(randomNumber);
+        }
+
+        return bombs;
+    }
+
     //FUNZIONE PER CREARE LE CELLE:
     const createCell = (cellNumber, level) => {
         const cell = document.createElement('div');
