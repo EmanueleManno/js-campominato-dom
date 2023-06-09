@@ -108,8 +108,10 @@ h2 {
 }
 
 /*SFONDO CELLE BOMBE*/
-.bg-bomb {
+#grid .cell.clicked.bomb {
+    color: white;
     background-color: red;
+    cursor: not-allowed;
 }
 
 /*CLASSE FLEX*/
