@@ -27,19 +27,30 @@
             <!--Immagine dell'Header-->
             <img src="img/bomba.jpg" class="shake" alt="bomba">
         </div>
-        <!--Div contenente bottoni-->
+
+        <!--Div contenente bottone gioca, difficoltà e punteggio-->
         <div class="flex">
-        <!--Bottone Gioca nell'Header-->
-        <button class="hithere">GIOCA!</button>
+            <!--Scegli la difficoltà-->
+            <select id="bottone_difficolta">
+                <option value="facile">Facile</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="difficile">Difficle</option>
+            </select>
+            <!--Punteggio-->
+            <div id="punteggio">Punteggio: </div>
+            <!--Bottone Gioca nell'Header-->
+            <button class="hithere padding">GIOCA!</button>
+            
         </div>
     </header>
 
     <!--Corpo della pagina-->
     <main>
         <!--Contenitore della griglia del campo minato-->
-        <div class="container none">
+        <div class="container">
             <!--Griglia del campo minato contenente le celle-->
             <div id="grid">
+                <h3>Seleziona il livello di difficoltà e gioca!</h3>
                 <!--Creo le celle da Javascript-->
             </div>
         </div>

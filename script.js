@@ -2,42 +2,44 @@
 console.log('JS');
 
 //RECUPERIAMO GLI ELEMENTI DAL DOM:
-const container = document.querySelector('.container');
-console.log(container);
 const grid = document.getElementById('grid');
 console.log(grid);
 const button = document.querySelector('button');
 console.log(button);
 
-//PREPARO I MIEI DATI INIZIALI:
-const rows = 10;
-const cols = 10;
-const cells = rows * cols;
+//FUNZIONE CHE CONTIENE LA LOGICA DI GIOCO:
+const startGame = () => {
 
-//FUNZIONE PER CREARE UNA CELLA:
-const createCell = () => {
-    const cell = document.createElement('div');
-    cell.className = 'cell'
-    return cell;
+    //SE VOGLIO FARE UNA NUOVA PARTITA:
+    button.innerText ='Nuova Partita';
+
+    //SVUOTO LA PAGINA:
+    grid.innerText = '';
+
+    //FUNZIONE PER CREARE LE CELLE:
+    const createCell = (cellNumber) => {
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        cell.append(cellNumber);
+        return cell;
 }
 
-//SCRIVO I NUMERI DENTRO ALLE CELLE:
-for (let i=0; i< cells; i++) {
-    const cell = createCell();
-    cell.innerText = i + 1;
+    for(let i = 1; i <= 100; i++) {
 
-    //AL CLICK DELLA CELLA COLORALA DI AZZURRO:
-    cell.addEventListener('click',() => {
-        cell.classList.add('bg-lightblue');
-    })
+        //CREO LA CELLA:
+        const cell = createCell(i);
 
-    grid.appendChild(cell);
+        //AGGANCIARE L'EVENT LISTENER:
+        cell.addEventListener('click',() => {
+            cell.classList.add('clicked');
+            console.log(cell.innerText);
+        })
+
+        //LA INSERISCO IN PAGINA:
+        grid.appendChild(cell);
+    }
 }
 
 //METTO IN ASCOLTO IL BOTTONE:
-button.addEventListener('click' , function(){
-    console.log('Si gioca');
-    //AL CLICK TOLTO LA CLASSE NONE AL CONTAINER:
-    container.classList.remove('none');
-})
+button.addEventListener('click', startGame);
 

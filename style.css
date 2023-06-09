@@ -48,18 +48,32 @@ header img {
     width: calc(100% / 10);
     border: 1px solid black;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+/*H3*/
+h3 {
     padding: 20px;
+}
+
+/*SFONDO CELLE BUONE*/
+#grid .cell.clicked {
+    color: white;
+    background-color: lightskyblue;
 }
 
 /*BOTTONE*/
 button {
-    padding: 10px;
+    margin-left: 20px;
     border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
     height: 50px;
     width: 75px;
     background-color: lightcyan;
+    margin-left: 100px;
 }
 
 /*TITOLO DELL'HEADER*/
@@ -72,11 +86,6 @@ h2 {
 /*CLASSE NONE*/
 .none {
     display: none;
-}
-
-/*SFONDO CELLE BUONE*/
-.bg-lightblue {
-    background-color: lightskyblue;
 }
 
 /*SFONDO CELLE BOMBE*/
@@ -122,4 +131,16 @@ h2 {
   @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
+  }
+
+  /*PADDING*/
+  .padding {
+    padding: 10px;
+  }
+
+  /*DIFFICOLTA'*/
+  #bottone-difficoltà {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
   }
