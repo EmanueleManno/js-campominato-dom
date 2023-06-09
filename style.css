@@ -53,16 +53,19 @@ header img {
     align-items: center;    
 }
 
+/*STRUTTURA GRIGLIA DIFFICILE*/
 #grid.difficile .cell {
     height: calc(100% / 7);
     width: calc(100% / 7);
 }
 
+/*STRUTTURA GRIGLIA INTERMEDIA*/
 #grid.intermedio .cell {
     height: calc(100% / 9);
     width: calc(100% / 9);
 }
 
+/*STRUTTURA GRIGLIA FACILE*/
 #grid.facile .cell {
     height: calc(100% / 10);
     width: calc(100% / 10);
@@ -77,6 +80,7 @@ h3 {
 #grid .cell.clicked {
     color: white;
     background-color: lightskyblue;
+    cursor: not-allowed;
 }
 
 /*BOTTONE*/

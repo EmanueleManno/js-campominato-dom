@@ -8,6 +8,8 @@ const button = document.querySelector('button');
 console.log(button);
 const levelSelect = document.getElementById('bottone-difficolta');
 console.log(levelSelect);
+const scorePlaceholder = document.getElementById('punteggio');
+console.log(scorePlaceholder);
 
 //FUNZIONE CHE CONTIENE LA LOGICA DI GIOCO:
 const startGame = () => {
@@ -46,6 +48,9 @@ const startGame = () => {
     //CALCOLO LE CELLE TOTALI:
     const totalCells = rows * cols;
 
+    //PREPARO IL PUNTEGGIO:
+    let score = 0;
+
     //FUNZIONE PER CREARE LE CELLE:
     const createCell = (cellNumber, level) => {
         const cell = document.createElement('div');
@@ -61,6 +66,14 @@ const startGame = () => {
 
         //AGGANCIARE L'EVENT LISTENER:
         cell.addEventListener('click', () => {
+
+            //CONTROLLO SE ERA STATA GIA' CLICCATA:
+            if(cell.classList.contains('clicked')) return;
+
+            //INCREMENTO IL PUNTEGGIO:
+            scorePlaceholder.innerText = ++score;
+
+            //AGGIUNGO LA CLASSE CLICKED:
             cell.classList.add('clicked');
             console.log(cell.innerText);
         })
